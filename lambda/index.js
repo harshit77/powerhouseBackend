@@ -448,8 +448,11 @@ const server=new GraphQLServerLambda({
 
 exports.handler = server.createHandler({
     cors: {
-      origin: '*',
-      credentials: true,
+     origin: true,
+     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+     credentials: true,
+     preflightContinue: true,
+     maxAge: 600,
     },
   });
 
