@@ -446,7 +446,12 @@ const server=new GraphQLServerLambda({
     }
 });
 
-exports.handler = server.handler;
+exports.handler = server.createHandler({
+    cors: {
+      origin: '*',
+      credentials: true,
+    },
+  });
 
 // cron.schedule("* * * * *",function() {
 //     console.log("RUNNING A tASK EVERY mINUTE ");
