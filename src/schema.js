@@ -1,3 +1,4 @@
+module.exports=`
 type Query {
     getAllUsers:[User!]!
     getUser(id:ID!):User!
@@ -67,3 +68,4 @@ type Notification {
   impactedId:String!
   createdAt:String!
 }
+`;
