@@ -7,6 +7,7 @@ const {SendEmail}=require('../src/sendemail');
 const receipent="send2avinash@yahoo.com";
 const cron= require('node-cron');
 const {request} = require('graphql-request');
+const typeDefsPath=require('../src/schema.graphql');
 
 
 const resolvers={
@@ -435,7 +436,7 @@ const resolvers={
 }
 
 const server=new GraphQLServerLambda({
-    typeDefs:'./src/schema.graphql',
+    typeDefs:typeDefsPath,
     resolvers,
     context:request=>{
         return {
