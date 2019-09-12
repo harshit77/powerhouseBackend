@@ -1,0 +1,7 @@
+endpoint:  https://eu1.prisma.sh/harshit-sahu/powerhouseTrainingYardPanki/dev
+datamodel: datamodel.prisma
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/
+
+#http://localhost:4466
